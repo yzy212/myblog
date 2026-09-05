@@ -1059,7 +1059,7 @@ css_prefix: true
 inject:
   head:
     - <link rel="stylesheet" href="/css/theme-switcher.css">
-    - <script>try{var t=localStorage.getItem('accent-theme');if(t&&t!=='default'){document.documentElement.setAttribute('data-accent',t)}}catch(e){}</script>
+    - <script>try{var t=localStorage.getItem('accent-theme');if(t&&t!=='default'){document.documentElement.setAttribute('data-accent',t)}var f=localStorage.getItem('font-size');if(f){document.documentElement.style.setProperty('--global-font-size',f+'px')}var g=localStorage.getItem('font-family');if(g&&g!=='default'){document.documentElement.setAttribute('data-font-family',g)}}catch(e){}</script>
   bottom:
     - <script src="/js/theme-switcher.js"></script>
 

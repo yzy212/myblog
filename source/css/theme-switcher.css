@@ -1,4 +1,4 @@
-/* 配色主题变量：覆盖 Butterfly 的强调色 */
+/* ============ 配色主题：覆盖 Butterfly 强调色 ============ */
 html[data-accent="green"] {
   --btn-bg: #34a853;
   --default-bg-color: #34a853;
@@ -35,33 +35,85 @@ html[data-accent="purple"] {
   --hr-border: rgba(139, 92, 246, 0.35);
 }
 
-/* 调色板 UI */
-.theme-palette {
+/* ============ 字体样式 ============ */
+html[data-font-family="serif"] body {
+  font-family: "SimSun", "Songti SC", "Noto Serif SC", serif !important;
+}
+
+html[data-font-family="hei"] body {
+  font-family: "SimHei", "Microsoft YaHei", "PingFang SC", sans-serif !important;
+}
+
+html[data-font-family="kai"] body {
+  font-family: "KaiTi", "STKaiti", "Noto Serif SC", serif !important;
+}
+
+/* ============ 外观设置面板 ============ */
+.appearance-panel {
   position: fixed;
   left: 20px;
   bottom: 40px;
   z-index: 9999;
   display: flex;
-  gap: 8px;
-  padding: 8px 10px;
+  flex-direction: column;
+  gap: 10px;
+  padding: 12px 14px;
   background: var(--card-bg);
-  border-radius: 20px;
+  border-radius: 14px;
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.15);
 }
 
-.theme-palette .dot {
-  width: 22px;
-  height: 22px;
+.ap-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.ap-title {
+  font-size: 12px;
+  color: var(--font-color);
+  opacity: 0.7;
+  min-width: 24px;
+}
+
+.ap-dots {
+  display: flex;
+  gap: 7px;
+}
+
+.ap-dot {
+  width: 20px;
+  height: 20px;
   border-radius: 50%;
   cursor: pointer;
   border: 2px solid transparent;
   transition: transform 0.2s;
 }
 
-.theme-palette .dot:hover {
+.ap-dot:hover {
   transform: scale(1.25);
 }
 
-.theme-palette .dot.active {
+.ap-dot.active {
   border-color: var(--font-color);
+}
+
+.ap-btn {
+  padding: 2px 9px;
+  font-size: 13px;
+  cursor: pointer;
+  border: 1px solid rgba(128, 128, 128, 0.35);
+  border-radius: 6px;
+  background: transparent;
+  color: var(--font-color);
+  line-height: 1.6;
+}
+
+.ap-btn:hover {
+  border-color: var(--btn-bg);
+}
+
+.ap-btn.active {
+  border-color: var(--btn-bg);
+  color: var(--btn-bg);
 }
