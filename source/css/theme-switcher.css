@@ -1,0 +1,67 @@
+/* 配色主题变量：覆盖 Butterfly 的强调色 */
+html[data-accent="green"] {
+  --btn-bg: #34a853;
+  --default-bg-color: #34a853;
+  --scrollbar-color: #34a853;
+  --text-bg-hover: rgba(52, 168, 83, 0.7);
+  --blockquote-bg: rgba(52, 168, 83, 0.1);
+  --hr-border: rgba(52, 168, 83, 0.35);
+}
+
+html[data-accent="pink"] {
+  --btn-bg: #f472b6;
+  --default-bg-color: #f472b6;
+  --scrollbar-color: #f472b6;
+  --text-bg-hover: rgba(244, 114, 182, 0.7);
+  --blockquote-bg: rgba(244, 114, 182, 0.1);
+  --hr-border: rgba(244, 114, 182, 0.35);
+}
+
+html[data-accent="orange"] {
+  --btn-bg: #ff9800;
+  --default-bg-color: #ff9800;
+  --scrollbar-color: #ff9800;
+  --text-bg-hover: rgba(255, 152, 0, 0.7);
+  --blockquote-bg: rgba(255, 152, 0, 0.1);
+  --hr-border: rgba(255, 152, 0, 0.35);
+}
+
+html[data-accent="purple"] {
+  --btn-bg: #8b5cf6;
+  --default-bg-color: #8b5cf6;
+  --scrollbar-color: #8b5cf6;
+  --text-bg-hover: rgba(139, 92, 246, 0.7);
+  --blockquote-bg: rgba(139, 92, 246, 0.1);
+  --hr-border: rgba(139, 92, 246, 0.35);
+}
+
+/* 调色板 UI */
+.theme-palette {
+  position: fixed;
+  left: 20px;
+  bottom: 40px;
+  z-index: 9999;
+  display: flex;
+  gap: 8px;
+  padding: 8px 10px;
+  background: var(--card-bg);
+  border-radius: 20px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.15);
+}
+
+.theme-palette .dot {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: transform 0.2s;
+}
+
+.theme-palette .dot:hover {
+  transform: scale(1.25);
+}
+
+.theme-palette .dot.active {
+  border-color: var(--font-color);
+}
